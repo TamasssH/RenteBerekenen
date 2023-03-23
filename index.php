@@ -6,22 +6,16 @@
     </head>
     <body>
         <?php
-        
-        $ingVal = $rntPercentage = 0;
 
         if (isset($_POST["submit"])) {
             
-            $ingVal = $_POST["ingVal"];
-            $rntPercentage = $_POST["rntPercentage"];
-
             //check for input in the radio buttons
-            if (!isset($_POST["radio1"]) && !isset($_POST["radio2"])) {
+            if (empty($_POST["radio1"]) && empty($_POST["radio2"])) {
                 echo "Je moet een keuze maken.<br><br>";
             } 
-            if (!isset($ingVal) || !isset($rntPercentage)) {
-                echo "Je moet een waarde invullen.";
+            if (empty($_POST["ingVal"]) || empty($_POST["rntPercentage"])) {
+                echo "Vul een waarde in.";
             }
-            
         }
         ?>
         <h1>Bereken uw rente.</h1>
