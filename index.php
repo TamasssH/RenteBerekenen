@@ -27,8 +27,8 @@
                         for ($i=0; $i<10;$i++) {
                             $output = $ingVal * (1+$rntPercentage/100)^$i;
                         }
-                    }else {
-                        //andere rente berekening hier.
+                    }else if ($option == "option2") {
+                        $output = $ingVal * (1+$rntPercentage/100);
                     }
                 }
             }
