@@ -25,7 +25,6 @@
                     if ($option == "option1") {
                         for ($i=1; $i<=10;$i++) {
                             $output = $ingVal * ($i+$rntPercentage/100);
-                            echo "<table>".$output."</table>";
                         }
                     }else if ($option == "option2") {
                         $output = 72/$rntPercentage;
